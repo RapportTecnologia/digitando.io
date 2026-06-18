@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/typing-tutor",
+  basePath: "/digitando.io",
 };
 
 export default nextConfig;

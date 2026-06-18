@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /typing-tutor
+          NEXT_PUBLIC_BASE_PATH: /digitando.io
 
       - name: Deploy to page branch
         uses: peaceiris/actions-gh-pages@v3
