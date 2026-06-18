@@ -7,6 +7,7 @@ import TopBar from './components/TopBar';
 import PhaseSelector from './components/PhaseSelector';
 import TypingGame from './components/TypingGame';
 import FreePractice from './components/FreePractice';
+import AdSense from './components/AdSense';
 import { getPhase } from './lib/curriculum';
 
 type View = { type: 'map' } | { type: 'phase'; id: number };
@@ -88,6 +89,11 @@ export default function Home() {
           onRoundComplete={(result) => handleRoundComplete(activePhase.id, result)}
         />
       )}
+
+      {/* AdSense at bottom */}
+      <div className="flex justify-center py-4">
+        <AdSense adSlot="1234567890" style={{ width: '728px', height: '90px' }} />
+      </div>
     </div>
   );
 }

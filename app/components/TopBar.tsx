@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Palette, LogOut, Trophy, Target, Gauge, Home } from 'lucide-react';
 import { useSession } from '@/app/context/SessionContext';
 import { THEMES } from '@/app/lib/themes';
+import VisitCounter from './VisitCounter';
 
 interface TopBarProps {
   liveStats?: { wpm: number; accuracy: number } | null;
@@ -55,8 +56,9 @@ export default function TopBar({ liveStats, onHome }: TopBarProps) {
         </div>
       )}
 
-      {/* Right: score, theme, logout */}
+      {/* Right: score, visit counter, theme, logout */}
       <div className="flex items-center gap-3">
+        <VisitCounter />
         <div
           className="flex items-center gap-2 rounded-full px-4 py-1.5"
           style={{ background: 'var(--accent-soft)' }}
